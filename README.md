@@ -29,9 +29,9 @@ Confira as principais Linguagens, Frameworks e Bancos de Dados usados:
 ## 🤝 Colaboradores
 
 Nossos colaboradores do Projeto são:
--Nathan Fuchida
--Nícolas Albano
--Artur Cassuriaga
--[Se mais alguém ajudar nessa etapa, se adicionem pf!!]
+- Nathan Fuchida
+- Nícolas Albano
+- Artur Cassuriaga
+- [Se mais alguém ajudar nessa etapa, se adicionem pf!!]
 
 Obrigado Por Ler!
