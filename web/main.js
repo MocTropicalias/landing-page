@@ -47,3 +47,30 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', checkVisibility);
     checkVisibility();
 });
+
+
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Evitar que o prompt de instalação apareça automaticamente
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const installButton = document.getElementById('install-button');
+    installButton.style.display = 'block'; // Mostrar o botão de instalação
+
+    installButton.addEventListener('click', () => {
+        installButton.style.display = 'none'; // Esconder o botão após o clique
+        deferredPrompt.prompt(); // Exibir o prompt de instalação
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('Usuário aceitou a instalação.');
+            } else {
+                console.log('Usuário rejeitou a instalação.');
+            }
+            deferredPrompt = null;
+        });
+    });
+});

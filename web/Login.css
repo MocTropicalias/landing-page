@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #006996;
+}
+body, html {
+    overflow-x: hidden;
+}
+
+li{
+    margin-left: 50px;
+    cursor: pointer;
+}
+.lado{
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none; 
+    display: flex;
+    align-items: center; 
+}
+
+.navbar li {
+    margin-top: 1.5%;
+    color: #EBDFC5;
+    font-size: 18px;
+    font-family: Montserrat;
+    word-wrap: break-word
+}
+.navbar li:hover{
+    transition: 0.5s ease;
+    color: #E45F15;
+}
+.navbar img {
+    margin-top: 1.5%;
+    height: 40px; 
+    margin-right: 2%;
+}
+
+.conjunto{
+    margin-left: 250px;
+    margin-top: 140px;
+}
+
+.criar {
+    position: absolute; 
+    top: 30%;
+    margin-top: 2%;
+}
+h2 {
+    color: #E45F15;
+    font-size: 100px;
+    font-family: 'Landasans', sans-serif;
+    word-wrap: break-word;
+}
+
+
+input{
+    border-radius: 2.3125rem;
+    border: 2px solid #EBDFC5;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 22.625rem;
+    height: 3.6875rem;
+    flex-shrink: 0;
+    padding-left: 5%;
+}
+
+button{
+    background-color: #E45F15;
+    width: 22.625rem;
+    height: 3.6875rem;
+    flex-shrink: 0;
+    border-radius: 2.3125rem;
+    border: 1px solid #3A240A;
+    background: var(--Laranja, #E45F15);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #EBDFC5;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+    margin-left: 3.345%;
+}
+
+section{
+    margin-left: 68%;
+}
+section p{
+    color: #EBDFC5;
+    font-family: Montserrat;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 4.84rem;
+}
+
+.laranja{
+    background-color: #E45F15;
+    width: 100%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+
+}
+
+.laranja p{
+    color: #EBDFC5;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 2.250%;
+
+}
+.laranja img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-left: 53%;
+}
+
+
+.criar p:hover{
+    cursor: pointer;
+    color: #E45F15;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: 1s ease;
+    background-color: #EBDFC5;
+    color: #006996;
+}
+
+a{
+    color: #EBDFC5;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.5s ease;
+    color: #E45F15;
+}
