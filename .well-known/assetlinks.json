@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.tropicalias",
+    "sha256_cert_fingerprints":
+    ["C3:30:04:3A:DF:13:D0:FB:85:EE:5D:DD:CC:3F:1A:10:AC:64:5C:4F:3E:2D:C1:B5:F3:06:64:C5:6A:26:B0:50"]
+  }
+}]
