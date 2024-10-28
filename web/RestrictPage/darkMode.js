@@ -1,39 +1,37 @@
-function verifyMode() {
-    let darkMode = localStorage.getItem("darkMode") === "true";
-    
-    const container = document.getElementsByClassName("container")[0];
+function toggleLoaderMode(darkMode, loader) {
+    if (loader !== null) {
+        loader.classList.toggle("darkLoaderContainer", darkMode);
+        loader.classList.toggle("lightLoaderContainer", !darkMode);
+    }
+}
+
+function applyMode(darkMode) {
+    const container = document.querySelector(".container");
+    const loader = document.getElementById("loader");
     const icon = document.getElementById("darkMode");
 
-    if (darkMode) {
-        container.classList.add("bgDarkMode");
-        icon.src = "../assets/lightMode.svg";
-    } else {
-        container.classList.add("bgLightMode");
-        icon.src = "../assets/darkMode.svg";
-    }
+    container.classList.toggle("bgDarkMode", darkMode);
+    container.classList.toggle("bgLightMode", !darkMode);
 
+    icon.src = darkMode ? "../assets/lightMode.svg" : "../assets/darkMode.svg";
+    toggleLoaderMode(darkMode, loader);
+}
+
+function verifyMode() {
+    const darkMode = localStorage.getItem("darkMode") === "true";
+    applyMode(darkMode);
     return darkMode;
 }
 
 function changeMode() {
     document.getElementById("darkMode").addEventListener("click", () => {
-        const container = document.getElementsByClassName("container")[0];
         let darkMode = localStorage.getItem("darkMode") === "true";
-
-        container.classList.toggle("bgDarkMode");
-        container.classList.toggle("bgLightMode");
-
         darkMode = !darkMode;
-
-        if (darkMode) {
-            document.getElementById("darkMode").src = "../assets/lightMode.svg";
-        } else {
-            document.getElementById("darkMode").src = "../assets/darkMode.svg";
-        }
-
+        
+        applyMode(darkMode);
         localStorage.setItem("darkMode", darkMode.toString());
     });
 }
 
-let darkMode = verifyMode();
+const darkMode = verifyMode();
 changeMode();

@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="restrict-page.css">
     <script src="darkMode.js" defer></script>
+    <script src="loginController.js" defer></script>
     <title>Página do Administrador</title>
 </head>
 <body>
     
-    <div class="container bgLightMode"> 
-        <h1 class="title">Página do Administrador</h1>
-        <img src="../assets/darkMode.svg" alt="darkMode" class="darkMode" id="darkMode">
-        <div>
-            <label for="nome">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+    <div class="container bgLightMode fatherContainer">
+        <div class="container">
+            <h1 class="title">Página do Administrador</h1>
+            <img src="../assets/darkMode.svg" alt="darkMode" class="darkMode" id="darkMode">
+            <div>
+                <label for="nome">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+            </div>
+            <p id="errorText" class="error invisible">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, animi.</p>
+            <div id ="btConnect" class="button">Conectar</div>
         </div>
-        <div>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" placeholder="Senha">
+
+        <div id="loader" class="loaderContainer darkLoaderContainer">
+            <div class="cube invisible"><div class="cube__inner"></div></div>
+            <div class="cube invisible"><div class="cube__inner"></div></div>
+            <div class="cube invisible"><div class="cube__inner"></div></div>
         </div>
-        <div class="button">Conectar</div>
     </div>
 
 </body>
