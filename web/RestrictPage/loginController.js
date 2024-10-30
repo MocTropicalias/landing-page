@@ -11,18 +11,18 @@ function verifyAuth(email, password) {
             errorText.classList.add("invisible");
         }, 5000);
 
-        return
+        return;
     }
 
     if (password.length < 6) {
         errorText.textContent = "Senha incorreta!";
         errorText.classList.remove("invisible");
 
-        setTimeout(() => {  
+        setTimeout(() => {
             errorText.classList.add("invisible");
         }, 5000);
 
-        return
+        return;
     }
 
     for (let i = 0; i < cubes.length; i++) {
@@ -33,57 +33,46 @@ function verifyAuth(email, password) {
     .then(response => {
         if (response.ok) {
             window.open("restrict-page.html", "_self");
+            hideCubes();
         } else if (response.status === 401) {
             errorText.textContent = "Email ou senha inválidos!";
             errorText.classList.remove("invisible");
-            
-            for (let i = 0; i < cubes.length; i++) {
-                cubes[i].classList.add("invisible");
-            }
-
-            setTimeout(() => {
-                errorText.classList.add("invisible");
-            }, 5000);
-
+            hideCubes();
         } else if (response.status === 403) {
             errorText.textContent = "Usuário não autorizado!";
             errorText.classList.remove("invisible");
-
-            for (let i = 0; i < cubes.length; i++) {
-                cubes[i].classList.add("invisible");
-            }
-
-            setTimeout(() => {
-                errorText.classList.add("invisible");
-            }, 5000);
-
+            hideCubes();
         } else if (response.status === 404) {
             errorText.textContent = "Usuário não encontrado!";
             errorText.classList.remove("invisible");
-
-            for (let i = 0; i < cubes.length; i++) {
-                cubes[i].classList.add("invisible");
-            }
-
-            setTimeout(() => {
-                errorText.classList.add("invisible");
-            }, 5000);
-
+            hideCubes();
         } else if (response.status === 418) {
             errorText.textContent = "Você é muito especial!";
             errorText.classList.remove("invisible");
         } else if (response.status === 500) {
             alert("Ocorreu um erro interno do servidor! Tente novamente mais tarde!");
-
-            for (let i = 0; i < cubes.length; i++) {
-                cubes[i].classList.add("invisible");
-            }
-
-            setTimeout(() => {
-                errorText.classList.add("invisible");
-            }, 5000);
+            hideCubes();
         }
-    })
+    });
+}
+
+function hideCubes() {
+    for (let i = 0; i < cubes.length; i++) {
+        cubes[i].classList.add("invisible");
+    }
+    setTimeout(() => {
+        errorText.classList.add("invisible");
+    }, 5000);
+}
+
+function verifyEnter(element) {
+    element.addEventListener("keyup", (e) => {
+        if (e.keyCode == 13) {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("senha").value;
+            verifyAuth(email, password);
+        }
+    });
 }
 
 document.getElementById("btConnect").addEventListener("click", () => {
@@ -91,3 +80,9 @@ document.getElementById("btConnect").addEventListener("click", () => {
     const password = document.getElementById("senha").value;
     verifyAuth(email, password);
 });
+
+
+const campos = document.querySelectorAll("input");
+for (let i = 0; i < campos.length; i++) {
+    verifyEnter(campos[i]);
+}
