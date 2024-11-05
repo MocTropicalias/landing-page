@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br   ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="restrict-page.css">
+    <link rel="stylesheet" href="restrict-login.css">
     <script src="darkMode.js" defer></script>
     <script src="loginController.js" defer></script>
     <title>Página do Administrador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+        
     <div class="container bgLightMode fatherContainer">
         <div class="container">
-            <h1 class="title">Página do Administrador</h1>
+            <h1 class="title">ADMIN</h1>
             <img src="../assets/darkMode.svg" alt="darkMode" class="darkMode" id="darkMode">
-            <div>
-                <label for="nome">Email:</label>
+            <form class="forms">
                 <input type="email" name="email" id="email" placeholder="Email">
-            </div>
-            <div>
-                <label for="senha">Senha:</label>
+                <br>
                 <input type="password" name="senha" id="senha" placeholder="Senha">
-            </div>
-            <p id="errorText" class="error invisible">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, animi.</p>
-            <div id ="btConnect" class="button">Conectar</div>
+                <p id="errorText" class="error invisible">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, animi.</p>
+                <div id ="btConnect" class="button">Conectar</div>
+
+            </form>
         </div>
 
         <div id="loader" class="loaderContainer darkLoaderContainer">
@@ -32,6 +32,14 @@
             <div class="cube invisible"><div class="cube__inner"></div></div>
         </div>
     </div>
+
+
+    
+    <footer class="container3">
+        <p>Desenvolvido por</p>
+        <img src="../assets/mocBrancaSemFUndo.png" alt="img6" width="10%">
+    </footer>
+    <script src="cor.js" defer></script>
 
 </body>
 </html>
