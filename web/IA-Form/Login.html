@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="form.js" defer></script>
+    <title>Navegação Tropicalias</title>
+</head>
+<body>
+
+    <div class="container1">
+        <div class="navbar">
+            <ul>
+                <img src="../assets/AraciSemFUndoBranca.png" alt="">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Suporte.html">Ajuda</a></li>
+                <li><a href="../Termos.html">Termos</a></li>
+            </ul>
+        </div>
+
+        <div class="display1">
+            <div class="conjunto">
+                <h1>Formulário</h1>
+            </div>
+        
+            <section class="criar">
+                <form action="conta" class="form">
+                    <input type="number" name="idade" id="idade" placeholder="Idade" required>
+
+                    <select name="genero" id="genero" required>
+                        <option value="">Gênero</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <select name="renda" id="renda" required>
+                        <option value="">Renda familiar mensal</option>
+                        <option value="<=2400">Menor ou igual a R$2400</option>
+                        <option value="2401-4000">Maior que R$2400 e menor que R$4000</option>
+                        <option value="4001-6500">Maior que R$4000 e menor que R$6500</option>
+                        <option value="6501-8500">Maior que R$6500 e menor que R$8500</option>
+                        <option value="8501-11000">Maior que R$8500 e menor que R$11000</option>
+                        <option value="11001-15000">Maior que R$11000 e menor que R$15000</option>
+                        <option value=">15000">Maior que R$15000</option>
+                    </select>
+
+                    <select name="estado" id="estado" required>
+                        <option value="">Estado</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="MG">MG</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RR">RR</option>
+                        <option value="RO">RO</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                        <option value="outros">Outros</option>
+                    </select>
+
+                    <select name="educacao" id="educacao" required>
+                        <option value="">Grau de educação</option>
+                        <option value="nenhum">Nenhum</option>
+                        <option value="fundamental">Fundamental</option>
+                        <option value="medio">Ensino médio</option>
+                        <option value="superior">Ensino superior</option>
+                        <option value="pos">Pós-graduação</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado">Doutorado</option>
+                    </select>
+
+                    <label>
+                        Pratica esportes? (pelo menos 3 vezes por semana)  
+                        <input type="checkbox" name="pratica_esportes" id="pratica_esportes">
+                    </label>
+
+                    <label>
+                        Frequenta muito espaços públicos? (parques, museus, etc)  
+                        <input type="checkbox" name="espacos_publicos" id="espacos_publicos">
+                    </label>
+
+                    <label>
+                        Usa muito eletrônicos? (mais de 6h por dia)  
+                        <input type="checkbox" name="usa_eletronicos" id="usa_eletronicos">
+                    </label>
+
+                    <div id="btEnviar" class="button">Enviar</div>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+    <footer class="container2">
+        <p>Desenvolvido por</p>
+        <img src="../assets/mocBranco.png" alt="Logo da empresa">
+    </footer>
+    
+</body>
+</html>

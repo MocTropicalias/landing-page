@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Impede o scroll lateral */
+}
+
+.bgLightMode {
+    background-color: #006996;
+    color: #252423;
+}
+
+.bgDarkMode {
+    background-color: #004d66;
+    color: #FAFDFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E45F1A;
+    width: 100%; /* Faz o contêiner ocupar a largura total */
+    height: 18rem;
+}
+
+.container3 p {
+    color: #EBDFC5;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.container3 img {
+    width: 100px;
+}
+
+.bgLightMode{
+    background-color: #006996;
+    color:#252423
+}
+
+.bgDarkMode{
+    background-color: #004d66;
+    color: #FAFDFF
+}
+
+.container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;;
+    height: 100vh;
+    width: 100vw;
+}
+
+#darkMode{
+    cursor: pointer;
+    width: 2rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.title{
+    margin-bottom: 1rem;
+}
+
+
+#dashboards{
+    width: 85%;
+    height: 75%;
+}
+
+.buttonContainer{
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.invisible{
+    display: none;
+}
+
+.error{
+    color: red;
+    font-weight: bolder;
+
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+.fatherContainer{
+    align-items: center;
+    justify-content: center;
+}
+
+/* A partir daqui é o loader */
+
+.darkLoaderContainer{
+    --uib-color: white;
+}
+
+.lightLoaderContainer{
+    --uib-color: black;
+}
+
+.loaderContainer {
+    --uib-size: 45px;
+    --uib-speed: 1.75s;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 20%;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: calc(var(--uib-size) * 0.6);
+}
+  
+.cube {
+    flex-shrink: 0;
+    width: calc(var(--uib-size) * 0.2);
+    height: calc(var(--uib-size) * 0.2);
+    animation: jump var(--uib-speed) ease-in-out infinite;
+}
+
+.cube__inner {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 25%;
+    background-color: var(--uib-color);
+    transform-origin: center bottom;
+    animation: morph var(--uib-speed) ease-in-out infinite;
+    transition: background-color 0.3s ease;
+}
+
+.cube:nth-child(2) {
+    animation-delay: calc(var(--uib-speed) * -0.36);
+
+.cube__inner {
+    animation-delay: calc(var(--uib-speed) * -0.36);
+}
+}
+.cube:nth-child(3) {
+    animation-delay: calc(var(--uib-speed) * -0.2);
+
+.cube__inner {
+    animation-delay: calc(var(--uib-speed) * -0.2);
+}
+}
+
+@keyframes jump {
+0% {
+    transform: translateY(0px);
+}
+
+30% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+}
+
+50% {
+    transform: translateY(-200%);
+    animation-timing-function: ease-in;
+}
+
+75% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+}
+}
+
+@keyframes morph {
+0% {
+    transform: scaleY(1);
+}
+
+10% {
+    transform: scaleY(1);
+}
+
+20%,
+25% {
+    transform: scaleY(0.6) scaleX(1.3);
+    animation-timing-function: ease-in-out;
+}
+
+30% {
+    transform: scaleY(1.15) scaleX(0.9);
+    animation-timing-function: ease-in-out;
+}
+
+40% {
+    transform: scaleY(1);
+}
+
+70%,
+85%,
+100% {
+    transform: scaleY(1);
+}
+
+75% {
+    transform: scaleY(0.8) scaleX(1.2);
+}
+}
+
+
+input {
+    width: 450px;
+    height: 70px;
+    margin: 2px;
+    border-radius: 30px;
+    border: 2px solid #EBDFC5;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #EBDFC5;
+    padding-left: 40px;
+    background-color: #006996;
+}
+
+::placeholder {
+    color: #EBDFC5;
+    opacity: 0.6;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 7rem;
+    margin-right: 50px;
+    font-weight: 800;
+    line-height: 100px;
+    margin-top: 0;
+    font-family: Oswald;
+    color: #E45F15;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    word-wrap: break-word;
+    margin-left: 3%;
+}
+
+h2 {
+    font-size: 6rem;
+    margin: 0;
+    margin-top: 2%;
+    font-weight: 800;
+    line-height: 50px;
+    font-family: Oswald;
+    color: #EBDFC5;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    word-wrap: break-word;
+}
+label{
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 2%;
+    font-weight: 800;
+    line-height: 50px;
+    font-family: Oswald;
+    color: #EBDFC5;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 2%;
+}
+h1{
+    margin-top: 15%;
+}
+.button{
+    margin-top: 3%;
+    margin-bottom: .5%;
+}
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E45F15;
+    height: 18rem;
+}
+
+.container3 p {
+    color: #EBDFC5;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.container3 img {
+    width: 100px;
+}
+
+/* Estilização do botão */
+
+
+/* Centralizando o formulário na tela */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+/* Estilos para o modo dark do input */
+.inputDarkMode {
+    background-color: #004d66;
+    color: #FAFDFF;
+    border: 2px solid #FAFDFF;
+}
+
+.bgDarkMode .inputDarkMode::placeholder {
+    color: #FAFDFF;
+    opacity: 0.6;
+}
+
+/* Estilos para o modo light do input */
+.bgLightMode input {
+    background-color: #006996;
+    color: #EBDFC5;
+    border: 2px solid #EBDFC5;
+}
+
+/* Classe para aplicar no modo escuro */
+.bgDarkMode .button,
+.bgDarkMode input,
+.bgDarkMode button {
+    background-color: #CC4F1A;
+    color: #EBDFC5;
+}
+
+.bgDarkMode input {
+    background-color: #004d66;
+    color: #EBDFC5;
+}
+
+.bgDarkMode input::placeholder {
+    color: #EBDFC5;
+    opacity: 0.6;
+}
+
+
+
+@media (max-width: 500px){
+    .forms input{
+        width: 150%;
+    }
+    .button{
+        width: 150%;
+    }
+    .container h1{
+        margin-left: 10%;
+    }
+
+}
+.button {
+    background-color: #E45F15;
+    width: 23.725rem;
+    height: 3.6875rem;
+    border-radius: 2.3125rem;
+    border: 1px solid #E45F15;
+    background: var(--Laranja, #E45F15);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #EBDFC5;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    line-height: 3.6875rem; 
+    margin-left: 0; 
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    background-color: #b34b13;
+}
+.button:active{
+    transform: scale(1);
+    background-color: #8a390e;
+    border: solid #8a390e;
+}
+
+@media (max-width: 1000px){
+    .container h1{
+        margin-left: 4%;
+    }
+}
+@media(max-width: 850px){
+    .container h1{
+        margin-left: 5%;
+    }
+}
+@media(max-width: 700px){
+    .container h1{ 
+        margin-left: 7%;
+    }
+}
+@media(max-width: 470px){
+    .container h1{
+        margin-left: 13%;
+    }
+}
