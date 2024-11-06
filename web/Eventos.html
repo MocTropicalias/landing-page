@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Login.css">
-    <title>Navegação Tropicalias</title>
+    <link rel="stylesheet" href="Eventos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Evento</title>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <img src="../../Im/AraciSemFUndoBranca.png" alt="">
-            <li class="lado">Tropicalias</li>
-            <li><a href="index.html">Inicio</a></li>
-            <!-- <li>Eventos</li> -->
-            <!-- <li><a href="CriarConta.html">Criar conta</a></li> -->
+
+    <div class="container1">
+        <ul class="navbar">
+            <img src="assets/Araci (1).png" alt="">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Eventos.html">Evento</a></li>
+            <li><a href="suporte.html">Ajuda</a></li>
+            <li><a href="Termos.html">Termos</a></li>
+            <li><a href="Login.html">Área Restrita</a></li>
         </ul>
+        
+        <div class="display1">
+            <div class="conjunto">
+                <h2 id="cima">CADASTRE</h2>
+                <h2 id="debaixo">SEU EVENTO!</h2>
+            </div>
+        
+            <section class="criar">
+                <form action="index.html">
+                    <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+                    <br><br>
+                    <button type="submit">Cadastrar evento</button>
+                </form>
+                <p><a href="CriarConta.html">Insira seu email para poder cadastrar um evento!!</a></p>
+            </section>
+        
+        </div>
     </div>
-
-    <div class="conjunto">
-        <h2>Cadastrar</h2>
-        <h2>Evento</h2>
-    </div>
     
-    <section class="criar">
-        <form action="mailto:tropicalias2024@gmail.com">
-            <input type="date" name="data" id="data">
-            <br><br>
-            <input type="text" name="Nome" id="Nome" placeholder="Nome Evento" required>
-            <br><br>
-            <input type="text" name="local" id="local" placeholder="local" required>
-            <br><br>
-            <input type="number" name="Preco" id="Preco" required placeholder="Preco">
-            <button type="submit">Login</button>
-        </form>
-        <p><a href="CriarConta.html">Não tem cadastro ainda? Crie sua conta!</a></p>
-    </section>
-    
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    <div class="laranja">
+    <div class="container2">
         <p>Desenvolvido por</p>
-        <img src="../../Im/mocBrancaSemFUndo.png" alt="">
-
+        <img src="assets/mocBrancaSemFUndo.png" alt="">
     </div>
+    
 </body>
 </html>
