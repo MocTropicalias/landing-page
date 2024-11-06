@@ -49,7 +49,7 @@ async function sendData(data) {
         console.log(result); // Exibe o resultado no console
 
     } catch (error) {
-        console.error('Erro:', error);
+        console.log('Erro:', error);
         alert("Erro ao se conectar ao servidor. Verifique a URL e sua conexão.");
     }
 }
