@@ -11,17 +11,18 @@ const btEnviar = document.getElementById("btEnviar");
 btEnviar.addEventListener("click", () => {
     if (inputIdade.value > 0 && inputGenero.value && inputRenda.value && inputEstado.value && inputEducacao.value) {
         const data = {
-            "Qual é o seu gênero?": inputGenero.value,
-            "Qual é a sua idade?": inputIdade.value,
-            "Qual é a média da sua renda familiar mensal?": inputRenda.value,
-            "Qual estado você mora?": inputEstado.value,
-            "Você usa muitos eletrônicos durante o dia? (6h ou mais)": inputEletronicos.checked,
-            "Qual grau de educação você tem?": inputEducacao.value,
-            "Você pratica esportes? (pelo menos 3 vezes na semana)": inputEsportes.checked,
-            "Você frequenta muitos espaços públicos? (parques, museus, etc)": inputEspacosPublicos.checked
+            "genero": inputGenero.value,
+            "idade": inputIdade.value,
+            "renda": inputRenda.value,
+            "estado": inputEstado.value,
+            "eletronicos": inputEletronicos.checked ? 'v' : 'f',
+            "educacao": inputEducacao.value,
+            "esportes": inputEsportes.checked ? 'v' : 'f',
+            "locais_publicos": inputEspacosPublicos.checked ? 'v' : 'f'
         };
 
         // Chama a função para enviar os dados
+        console.log(data)
         sendData(data);
     } else {
         window.alert("Por favor, preencha todos os dados de forma válida!");
@@ -31,7 +32,7 @@ btEnviar.addEventListener("click", () => {
 // Função para enviar a requisição
 async function sendData(data) {
     try {
-        const response = await fetch('http://api-ia-inter-pys6.onrender.com/api/process', {
+        const response = await fetch('https://api-ia-inter-pys6.onrender.com/api/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,8 +46,8 @@ async function sendData(data) {
         }
 
         const result = await response.json();
-        alert("Resposta do servidor: " + JSON.stringify(result));
-        console.log(result); // Exibe o resultado no console
+        alert("Resposta do servidor: " + result.result ? 'Cliente em potencial!' : 'Usuario comum');
+        console.log(result.result ? 'Você é um possível usuário do app' : 'Você não é um possível usuário do app'); // Exibe o resultado no console
 
     } catch (error) {
         console.log('Erro:', error);
